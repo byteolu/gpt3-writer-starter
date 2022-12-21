@@ -31,12 +31,14 @@ const Home = () => {
   
     setApiOutput(`${output.text}`);
     setIsGenerating(false);
+    
+    
   }
-
+      
   return (
     <div className="root">
       <Head>
-        <title>Cover Letter Writer</title>
+        <title>Cover Letter Builder</title>
       </Head>
       <div className="container">
         <div className="header">
@@ -65,8 +67,9 @@ const Home = () => {
               {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
               </div>
             </a>
-</div>
-              {apiOutput && (
+  </div>
+              
+              {apiOutput && ( 
                 <div className="output">
                   <div className="output-header-container">
                     <div className="output-header">
@@ -77,7 +80,13 @@ const Home = () => {
                     <p>{apiOutput}</p>
                   </div>
                 </div> 
+                
               )}
+               {apiOutput && (
+              <a href={`data:text/plain;charset=utf-8,${encodeURIComponent(apiOutput)}`} download="cover-letter.txt">
+                <button className= "download-button">Download</button>
+              </a>
+            )}       
       </div>
       <div className="badge-container grow">
         <a
@@ -87,11 +96,13 @@ const Home = () => {
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with me in public</p>
+            <p>Connect with me!</p>
           </div>
         </a>
       </div>
     </div>
+    
+
   );
 };
 
