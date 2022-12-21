@@ -1,9 +1,20 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+
+
 export default function Document() {
   return (
     <Html>
       <Head>
+      
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TRKKH0G14"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2TRKKH0G14');
+</script>
         <meta property="og:title" content="Olu's Web App" key="title"/>
         <meta property="og:description" content="Build With Me!" key="description"/>
         <meta

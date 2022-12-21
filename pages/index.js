@@ -4,7 +4,10 @@ import { useState } from 'react';
 
 import buildspaceLogo from '../assets/buildspace-logo.png';
 
+
+
 const Home = () => {
+  
   const [userInput, setUserInput] = useState('');
   
   const onUserChangedText = (event) => {
@@ -90,13 +93,13 @@ const Home = () => {
       </div>
       <div className="badge-container grow">
         <a
-          href="https://twitter.com/Nodegree_techie"
+          href="https://www.buymeacoffee.com/Aicoverletter"
           target="_blank"
           rel="noreferrer"
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>Connect with me!</p>
+            <p>Buy Me Coffee!</p>
           </div>
         </a>
       </div>
